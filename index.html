@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Znajdź film! - Prosta wyszukiwarka filmów po angielsku!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rye&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<div class="wrapper">
+
+    <div class="title">Znajdź film <span style="font-size: 85px;"> !</span></div>
+
+    <div class="search"> <input type="text" class="film" placeholder="Wpisz nazwę filmu..."> <button
+            class="send">Znajdź!</button></div>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Ładowanie...</p>
+    </div>
+    <p class="error">Wpisałeś niepoprawną nazwę filmu. Może spróbuj po angielsku?</p>
+    <div class="container">
+        <div class="left">
+            <p>Nazwa:<span class="name"></span></p>
+            <p>Gatunek:<span class="category"></span></p>
+            <p>Rok produkcji:<span class="year"></span></p>
+            <p>Reżyseria:<span class="director"></span></p>
+            <p>Scenariusz:<span class="write"></span></p>
+            <p>Ocena na IMBD:</p>
+            <div class="imbdrank"><span class="imbd"></span></div>
+        </div>
+        <div class="right">
+            <img src="" alt="" id="poster" onerror="handleImageError(this)">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/script.js"></script>
+</body>
+
+</html>
